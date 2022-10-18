@@ -70,6 +70,9 @@ int ctox(char c, va_list list)
 		case ('X'):
 			i += itox(va_arg(list, unsigned int), 'X');
 			break;
+		case ('o'):
+			i += itoo(va_arg(list, unsigned int));
+			break;
 		case ('s'):
 			i += _puts(va_arg(list, char *));
 			break;
