@@ -51,37 +51,38 @@ int print_ui(unsigned int n)
  * @flags: flags
  * Return: number of chars printed
  */
-
-int ctoz(char c, va_list list, int *flags)
-{
-	int i = 0;
-
-	switch (c)
-	{
-		case ('a'):
-			i += dtoa(va_arg(list, double), 'a');
-			break;
-		case ('A'):
-			i += dtoa(va_arg(list, double), 'A');
-			break;
-		case ('e'):
-			i += dote(va_arg(list, double), 'e');
-			break;
-		case ('E'):
-			i += dote(va_arg(list, double), 'E');
-			break;
-		case ('f'):
-			i += dtof(va_arg(list, double), 'f');
-			break;
-		case ('F'):
-			i += dtof(va_arg(list, double), 'F');
-			break;
-		case ('g'):
-			i += dtog(va_arg(list, double), 'g');
-			break;
-		case ('G'):
-			i += dtog(va_arg(list, double), 'G');
-			break;
-	}
-	return (i);
-}
+/**
+*int ctoz(char c, va_list list, int *flags)
+*{
+*	int i = 0;
+*
+*	switch (c)
+*	{
+*		case ('a'):
+*			i += dtoa(va_arg(list, double), 'a');
+*			break;
+*		case ('A'):
+*			i += dtoa(va_arg(list, double), 'A');
+*			break;
+*		case ('e'):
+*			i += dote(va_arg(list, double), 'e');
+*			break;
+*		case ('E'):
+*			i += dote(va_arg(list, double), 'E');
+*			break;
+*		case ('f'):
+*			i += dtof(va_arg(list, double), 'f');
+*			break;
+*		case ('F'):
+*			i += dtof(va_arg(list, double), 'F');
+*			break;
+*		case ('g'):
+*			i += dtog(va_arg(list, double), 'g');
+*			break;
+*		case ('G'):
+*			i += dtog(va_arg(list, double), 'G');
+*			break;
+*	}
+*	return (i);
+*}
+*/

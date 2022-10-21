@@ -63,7 +63,6 @@ int _printf(const char *format, ...)
 				n += ctox(format[i], list, flags);
 				n += ctoy(format[i], list, flags);
 				n += sandp(format[i], list);
-				n += ctoz(format[i], list, flags);
 				i++;
 			}
 			else
