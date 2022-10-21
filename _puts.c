@@ -1,5 +1,6 @@
 #include "main.h"
-
+#include <stdlib.h>
+#include <limits.h>
 /**
  * _puts - prints a string to the stdout
  * @s: the string to be printed
@@ -56,5 +57,54 @@ int _putS(char *s)
 		}
 		i++;
 	}
+	return (i);
+}
+
+/**
+ * _putp - print the address stored in the pointer p
+ * @p: the void pointer
+ * Return: the number of chars printed
+ */
+
+int _putp(long int p)
+{
+	int i;
+	unsigned long int n = p;
+
+	if (p)
+	{
+		i = _putchar('0');
+		i += _putchar('x');
+		if (p < 0)
+		{
+			n = LONG_MAX + (-1 * p);
+		}
+		i += ltox(n);
+		return (i);
+	}
+	else
+	{
+		return (0);
+	}
+}
+
+/**
+ * ltox - converts unsigned long int to hex
+ * @n: the int to convert
+ * Return: the number of chars printed
+ */
+
+int ltox(unsigned long int n)
+{
+	int i;
+	unsigned long int r;
+
+	if (n > 16)
+		i = ltox(n / 16);
+	r = n % 16;
+	if (r > 9)
+		i += _putchar((r - 10) + 'a');
+	else
+		i += _putchar(r + '0');
 	return (i);
 }
