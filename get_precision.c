@@ -21,7 +21,7 @@ int get_precision(const char *format, int *i, va_list list)
 	precision = 0;
 	for (curr_i += 1; format[curr_i] != '\0'; curr_i++)
 	{
-		if (is_digit(format[curr_i]))
+		if (_isdigit(format[curr_i]))
 		{
 			precision *= 10;
 			precision += format[curr_i] - '0';
@@ -38,3 +38,15 @@ int get_precision(const char *format, int *i, va_list list)
 	*i = curr_i - 1;
 	return (precision);
 }
+
+/**
+ * _isdigit - determines if a char is a digit
+ * @c: the char
+ * Return: 1 if true and 0 otherwise
+ */
+
+int _isdigit(int c)
+{
+	return (c < 58 && c > 47 ? 1 : 0);
+}
+

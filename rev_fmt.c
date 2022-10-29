@@ -28,3 +28,18 @@ mk_buffer rev_fmt(mk_buffer buffer, va_list args)
 	buffer.box--;
 	return (buffer);
 }
+
+/**
+ * _strlen - count the number of non NULL chars in a string
+ * @s: the string
+ * Return: number of non NULL chars
+ */
+
+unsigned int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i])
+		i++;
+	return (i);
+}

@@ -30,20 +30,19 @@ mk_buffer rot13_fmt(mk_buffer buffer, va_list args)
 	{
 		for (i = 0; letters[i]; i++)
 		{
-			if (*str == letters[i]
-					{
-					*buffer.box = shift13[i];
-					break;
-					}
-					}
-					if (!letters[i])
-					*buffer.box = *str;
+			if (*str == letters[i])
+			{
+				*buffer.box = shift13[i];
+				break;
+			}
+		}
+		if (!letters[i])
+			*buffer.box = *str;
 
-					buffer.box++;
-					buffer.size++;
-					str++;
-					}
-
-					buffer.box--;
-					return (buffer);
-					}
+		buffer.box++;
+		buffer.size++;
+		str++;
+	}
+	buffer.box--;
+	return (buffer);
+}

@@ -39,6 +39,7 @@ int sandp(char, va_list);
 
 int ctoz(char, va_list, int *);
 
+int _isdigit(int);
 /**
  * struct storage - structure that holds information on the buffer
  *
